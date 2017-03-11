@@ -16,17 +16,17 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./Capture.png "Visualization"
-[image2]: ./Capture1.png "Distribution of Labels in the Training Data Set"
-[image3]: ./Capture2.png "Distribution of Labels in the Validation Data Set"
-[image4]: ./Capture3.png "Distribution of Labels in the Test Data Set"
-[image5]: ./Capture4.png "PreProcessing"
-[image6]: ./Capture5.png "5 New Test Images"
-[image7]: ./Capture6.png "Feature Visualization of Convolution Layer 2"
-[image8]: ./hard_images/0.png "Difficult Test 1"
-[image9]: ./hard_images/1.png "Difficult Test 2"
-[image10]: ./hard_images/2.png "Difficult Test 3"
-[image11]: ./hard_images/3.png "Difficult Test 4"
+[image1]: ./Capture.PNG "Visualization"
+[image2]: ./Capture1.PNG "Distribution of Labels in the Training Data Set"
+[image3]: ./Capture2.PNG "Distribution of Labels in the Validation Data Set"
+[image4]: ./Capture3.PNG "Distribution of Labels in the Test Data Set"
+[image5]: ./Capture4.PNG "PreProcessing"
+[image6]: ./Capture5.PNG "5 New Test Images"
+[image7]: ./Capture6.PNG "Feature Visualization of Convolution Layer 2"
+[image8]: ./hard_images/0.PNG "Difficult Test 1"
+[image9]: ./hard_images/1.PNG "Difficult Test 2"
+[image10]: ./hard_images/2.PNG "Difficult Test 3"
+[image11]: ./hard_images/3.PNG "Difficult Test 4"
 ---
 
 ###Data Set Summary & Exploration
