@@ -117,11 +117,12 @@ The LeNet model was used as a stepping stone for this project. With a batch size
 However, it was found that the resulting accuracy of the model on the verification data was arounnd 87 percent. In order to increase the accuracay of the model, and in order to reduce the possibility of overfitting, a dropout layer was added before the first fully connected layer with a dropout probability of 10 percent. Moreover batch size was reduced to 80 and the model was retrained.
 Using the new parameters, the accuracy was increased to 91.7 percent. At this point, effects of the training parameters were examined in order to find the best approach to increasing the model accuracy. The results are shown below:
 
-epochs | learning rate | batch size | keep_rate | accuracy
-10			0.001		  100				0.9		 89.2
-10		    0.001 		  64 				0.9		 91.7
-10			0.001		  80			    0.95     91.8
-15  		0.001		  80				0.97	 91.9
+| Epochs	|	Learning Rate	|	Batch Size |	Keep Rate	| Accuracy 
+|:---------:|:-----------------:|:------------:|:--------------:|:--------:| 
+|10			|0.001		 		|100		   |0.9		 		|89.2|
+|10		    |0.001 		  		|64 		   |0.9		 		|91.7|
+|10			|0.001		  		|80			   |0.95            |91.8|
+|15  		|0.001		  		|80			   |0.97	        |91.9|
 
 The results showed no significant effect from any of the parameters. However, it was apparent that the learning rate could need to be decreased as there was noticeable fluctuation of validation accuracy between epochs.
 
