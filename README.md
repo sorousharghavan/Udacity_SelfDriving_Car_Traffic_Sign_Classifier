@@ -23,10 +23,10 @@ The goals / steps of this project are the following:
 [image5]: ./Capture4.PNG "PreProcessing"
 [image6]: ./Capture5.PNG "5 New Test Images"
 [image7]: ./Capture6.PNG "Feature Visualization of Convolution Layer 2"
-[image8]: ./hard_images/0.PNG "Difficult Test 1"
-[image9]: ./hard_images/1.PNG "Difficult Test 2"
-[image10]: ./hard_images/2.PNG "Difficult Test 3"
-[image11]: ./hard_images/3.PNG "Difficult Test 4"
+[image8]: ./hard_images/0.jpg "Difficult Test 1"
+[image9]: ./hard_images/1.jpg "Difficult Test 2"
+[image10]: ./hard_images/2.jpg "Difficult Test 3"
+[image11]: ./hard_images/3.jpg "Difficult Test 4"
 ---
 
 ###Data Set Summary & Exploration
