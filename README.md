@@ -146,7 +146,7 @@ My final model results were:
 
 I searched for german traffic signs on the internet. I found one image that was worthy of testing which is image number 2. This image is interesting due to snow covering parts of the sign as well as the black and white background that adds to noise.
 
-For other samples, I decided not to try stock images and instead, try taking samples from an actual dash cam footage of a vehicle in Munchen, Germany. For this purpose I used [this video](https://www.youtube.com/watch?v=Tq-Xziv-8xY). I took four interesting samples from this video and used them as test subjects. Two of these samples could be difficult to classify. Number 1 is slightly warped and number 4 has unfavorable lightling conditions.
+For other samples, I decided not to try stock images and instead, try taking samples from an actual dash cam footage of a vehicle in Munchen, Germany. For this purpose I used [this video](https://www.youtube.com/watch?v=Tq-Xziv-8xY). I took four interesting samples from this video and used them as test subjects. Two of these samples could be difficult to classify. Number 0 is slightly warped and number 3 has unfavorable lightling conditions.
 
 ![image6]
 
