@@ -60,6 +60,8 @@ In order to better understand the distribution of the data, it is necessary to e
 
 ####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
+The code for this step is contained in the fourth code cell of the IPython notebook. 
+
 My first intuition about preprocessing the data was whether it would be better to process the images in greyscale or RGB. I assumed that RGB would be more beneficial since there will be more information layers to help classify the images. For example, detecting the color red in a sign would limit its categories to warning-type signs, detecting a high percentage of blue subpixels would mean certain permissions are allowed and so on.
 
 I first ran the model without any preprocessing to see the result. However, I did not manage to achieve an acceptable accuracy. 
@@ -77,7 +79,8 @@ Although, my experiment was not successful, it is possible that other techniques
 
 ####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-The code for this step is contained in the fourth code cell of the IPython notebook. 
+The code for this step is contained in the fifth code cell of the IPython notebook. 
+
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
@@ -102,7 +105,7 @@ My final model consisted of the following layers:
 
 ####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-The code for training the model is located in the eigth cell of the ipython notebook. 
+The code for training the model is located in the fifth and sixth cells of the ipython notebook. 
 
 I used the Adam optimizer for this project. After many iterations, it was found that a batch size of 60-90 would yield the best results for this model. Furthermore, some fluctuation in validation accuracy between different epochs were notices. In order to stabilize the gradients, the learning rate was reduced to 0.0007 and in return, the number of epochs was increased to 15 in order to counter the slow descent of the new learning rate. Furthermore, it was found that although the dropout probability did not show significant effect on the LeNet architecture, it was proven to be effective in increasing validation accuracy of the new architecture.
 
@@ -135,14 +138,16 @@ The LeNet model was developed for handwriting recognition on the MNIST data set 
 In order to add another layer to the network, the parameters of the other two convolution layers such as filter sizes and depths, as well the the fully connected layer depths need to be readjusted. This is necessary in order to keep the difference between the depth of two adjascent layers to a low amount which could help in stability of the model.
 
 My final model results were:
-* training set accuracy of 98.1
-* validation set accuracy of 93.7 
-* test set accuracy of 91.6
+* training set accuracy of 98.5
+* validation set accuracy of 94.1 
+* test set accuracy of 91.9
  
 
 ###Test a Model on New Images
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+
+The code for this step is contained in the seventh code cell of the IPython notebook. 
 
 I searched for german traffic signs on the internet. I found one image that was worthy of testing which is image number 2. This image is interesting due to snow covering parts of the sign as well as the black and white background that adds to noise.
 
@@ -177,55 +182,66 @@ The code for making predictions on my final model is located in the 11th cell of
 The top 5 softmax possibilities for the 5 test images as well as the corresponding labels are as follows:
 
 Image 0
-Softmax 0
-[  8.73608291e-01   7.64035806e-02   4.98321503e-02   7.26767830e-05
-   3.14176978e-05]
-Top Guesses 0
-a) 5
-b) 3
-c) 2
-d) 7
-e) 8
+Softmax 
+[  9.68340397e-01   2.87030190e-02   1.08602922e-03   4.23786987e-04
+   3.02637636e-04]
+Top Guesses 
+a) 12
+b) 40
+c) 38
+d) 1
+e) 35
 
 Image 1
-Softmax 1
-[  9.99580681e-01   4.15015762e-04   4.09790073e-06   1.63666243e-07
-   8.79331807e-08]
-Top Guesses 1
-a) 2
-b) 5
-c) 3
-d) 1
-e) 38
+Softmax 
+[ 0.64811838  0.27712172  0.03389869  0.01506209  0.0149643 ]
+Top Guesses
+a) 18
+b) 11
+c) 26
+d) 37
+e) 40
 
 Image 2
-Softmax 2
-[  9.99913692e-01   4.60614065e-05   2.07322573e-05   1.52145349e-05
-   1.48812865e-06]
-Top Guesses 2
-a) 12
-b) 15
-c) 40
-d) 13
+Softmax 
+[ 0.96986639  0.01685805  0.00793509  0.00349806  0.00167412]
+Top Guesses 
+a) 2
+b) 3
+c) 5
+d) 14
 e) 1
 
 Image 3
-Softmax 3
-[ 0.47948456  0.35532686  0.15199526  0.00506462  0.0026496 ]
-Top Guesses 3
-a) 37
-b) 26
-c) 18
-d) 35
-e) 24
+Softmax 
+[  9.28102612e-01   7.18947202e-02   1.47685796e-06   6.27514964e-07
+   3.63612713e-07]
+Top Guesses 
+a) 5
+b) 3
+c) 7
+d) 2
+e) 4
 
 Image 4
-Softmax 4
-[  9.99992251e-01   6.54967971e-06   3.21172536e-07   2.24598494e-07
-   1.25790947e-07]
-Top Guesses 4
+Softmax 
+[  9.99709904e-01   2.85126967e-04   3.23948893e-06   4.69287926e-07
+   3.94240089e-07]
+Top Guesses 
 a) 35
-b) 34
-c) 3
-d) 40
-e) 9
+b) 36
+c) 40
+d) 13
+e) 33
+
+It can be seen that the model predicted Image 4 with 99.97 percent accuracy. The model also succeeded in predicting Images 0, 2 and 3 correctly with an accuracy of more than 92 percent which shows the confidence of the model. However, the model failed to identify Image 1 currectly which could be associated with the fact that parts of the sign are covered with snow as well as the background which adds to the random noise in the processed image.
+
+It is also worth mentioning that the model's confidence was lower with Image 1 at around 65 percent. This as well as the other 4 guesses of the model could provide insight into how the model features can be improved.
+
+###4. Visualization of the neural network features
+
+For this purpose, the second layer of the neural network is chosen for demostration. This layer contains 16 features. In order to study the features, one of the new test images is run through the model and the features are visualized.
+
+It can be seen that the model was accurately trained to recognize the shape of the arrow as well as the round shape of the sign as important features at this layer. This visualization provides insight into how the layers can be redesigned for higher accuracy and efficiency. For instance, a few features at this layer seem to be looking for the same characteristics of the input image (arrow). Can the number of features at this layer be reduced? Are the duplicate features offering any advantages? How are the features different with more complex inputs?
+
+![image7]
