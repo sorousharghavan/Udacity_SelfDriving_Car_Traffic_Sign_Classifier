@@ -1,6 +1,6 @@
-#**Traffic Sign Recognition** 
-###Self-Driving Car Engineer Nanodegree - _Project 2_
-###By: **Soroush Arghavan**
+# **Traffic Sign Recognition** 
+### Self-Driving Car Engineer Nanodegree - _Project 2_
+### By: **Soroush Arghavan**
 ---
 
 **Build a Traffic Sign Recognition Project**
@@ -29,9 +29,9 @@ The goals / steps of this project are the following:
 [image11]: ./hard_images/3.jpg "Difficult Test 4"
 ---
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
 The code for this step is contained in the second code cell of the IPython notebook.  
 
@@ -42,7 +42,7 @@ Numpy was used to extract a summary of the data set characteristics as follows:
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
+#### 2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
 The code for this step is contained in the third code cell of the IPython notebook.  
 
@@ -56,9 +56,9 @@ In order to better understand the distribution of the data, it is necessary to e
 ![image3]
 ![image4]
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
+#### 1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
 The code for this step is contained in the fourth code cell of the IPython notebook. 
 
@@ -70,14 +70,14 @@ For the next trial, I added greyscale conversion as the first step of the prepro
 
 ![image5]
 
-####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
+#### 2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
 I used the provided training, validation and test data sets without alteration. The only step I took was to shuffle the data sets before feeding them to the training pipeline. One experiment was to flip the images along their vertical axes to create augmented data sets for training. However, this did not improve accuracy and is not discussed here.
 
 Although, my experiment was not successful, it is possible that other techniques such as adding random noise to the training set, as well as adding distortion could improve the accuracy of the model.
 
 
-####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 The code for this step is contained in the fifth code cell of the IPython notebook. 
 
@@ -103,7 +103,7 @@ My final model consisted of the following layers:
 | Reduce mean			| loss calculation								|
 | Optimizer				| Adam optimizer								|
 
-####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 The code for training the model is located in the fifth and sixth cells of the ipython notebook. 
 
@@ -111,7 +111,7 @@ I used the Adam optimizer for this project. After many iterations, it was found 
 
 It was found that a keep probability of 0.6 yields optimized results for the model.
 
-####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
 
@@ -143,9 +143,9 @@ My final model results were:
 * test set accuracy of 91.9
  
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 The code for this step is contained in the seventh code cell of the IPython notebook. 
 
@@ -155,7 +155,7 @@ For other samples, I decided not to try stock images and instead, try taking sam
 
 ![image6]
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
 
@@ -175,7 +175,7 @@ I also tried the following images on the model. These samples would be difficult
 
 ![image8] ![image9] ![image10] ![image11]
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
@@ -238,7 +238,7 @@ It can be seen that the model predicted Image 4 with 99.97 percent accuracy. The
 
 It is also worth mentioning that the model's confidence was lower with Image 1 at around 65 percent. This as well as the other 4 guesses of the model could provide insight into how the model features can be improved.
 
-###4. Visualization of the neural network features
+### 4. Visualization of the neural network features
 
 For this purpose, the second layer of the neural network is chosen for demostration. This layer contains 16 features. In order to study the features, one of the new test images is run through the model and the features are visualized.
 
