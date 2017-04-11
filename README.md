@@ -15,8 +15,6 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 [image1]: ./Capture.PNG "Visualization"
-
-[image1]: ./Capture.PNG "Visualization"
 [image2]: ./Capture1.PNG "Distribution of Labels in the Training Data Set"
 [image3]: ./Capture2.PNG "Distribution of Labels in the Validation Data Set"
 [image4]: ./Capture3.PNG "Distribution of Labels in the Test Data Set"
@@ -48,8 +46,6 @@ Numpy was used to extract a summary of the data set characteristics as follows:
 The code for this step is contained in the third code cell of the IPython notebook.  
 
 First, let's take a look at the visual representation of the data sample. For this purpose, a random set of 10 images from the training data is displayed below.
-
-![image1]
 
 ![image1](./Capture.PNG "Visualization")
 
