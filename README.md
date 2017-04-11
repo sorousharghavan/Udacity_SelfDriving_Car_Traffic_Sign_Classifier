@@ -13,8 +13,8 @@ The goals / steps of this project are the following:
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-
 [//]: # (Image References)
+[image1]: ./Capture.PNG "Visualization"
 
 [image1]: ./Capture.PNG "Visualization"
 [image2]: ./Capture1.PNG "Distribution of Labels in the Training Data Set"
@@ -27,6 +27,7 @@ The goals / steps of this project are the following:
 [image9]: ./hard_images/1.jpg "Difficult Test 2"
 [image10]: ./hard_images/2.jpg "Difficult Test 3"
 [image11]: ./hard_images/3.jpg "Difficult Test 4"
+
 ---
 
 ### Data Set Summary & Exploration
@@ -49,6 +50,8 @@ The code for this step is contained in the third code cell of the IPython notebo
 First, let's take a look at the visual representation of the data sample. For this purpose, a random set of 10 images from the training data is displayed below.
 
 ![image1]
+
+![image1](./Capture.PNG "Visualization")
 
 In order to better understand the distribution of the data, it is necessary to examine the labels and the number of samples associated with each one. The figure below portrays the distribution of labels among the training data set.
 
